@@ -6,27 +6,27 @@ import { useChat } from "ai/react";
 export default function Chat() {
   const { messages, append, isLoading } = useChat();
   const topics = [
-    { emoji: "🧙", value: "Work" },
-    { emoji: "🕵️", value: "People" },
-    { emoji: "💑", value: "Animals" },
-    { emoji: "🚀", value: "Food" },
-    { emoji: "🚀", value: "Coding apps" },
+    { emoji: "", value: "Work" },
+    { emoji: "", value: "People" },
+    { emoji: "", value: "Animals" },
+    { emoji: "", value: "Food" },
+    { emoji: "", value: "Coding apps" },
   ];
   const tones = [
-    { emoji: "😊", value: "Witty" },
-    { emoji: "😏", value: "Dark" },
-    { emoji: "😢", value: "Silly" },
-    { emoji: "😏", value: "Sarcastic" },
-    { emoji: "😂", value: "Goofy" },
+    { emoji: "", value: "Witty" },
+    { emoji: "", value: "Dark" },
+    { emoji: "", value: "Silly" },
+    { emoji: "", value: "Sarcastic" },
+    { emoji: "", value: "Goofy" },
   ];
   const types = [
-    { emoji: "🧙", value: "Knock-Knock" },
-    { emoji: "🕵️", value: "Story" },
+    { emoji: "", value: "Knock-Knock" },
+    { emoji: "", value: "Story" },
   ];
   const temperatures = [
-    { emoji: "🧙", value: "low" },
-    { emoji: "🕵️", value: "medium" },
-    { emoji: "💑", value: "high" },
+    { emoji: "", value: "low" },
+    { emoji: "", value: "medium" },
+    { emoji: "", value: "high" },
   ];
 
   const [state, setState] = useState({
@@ -60,7 +60,7 @@ export default function Chat() {
             <h3 className="text-xl font-semibold">Topic</h3>
 
             <div className="flex flex-wrap justify-center">
-              {topics.map(({ value, emoji }) => (
+              {topics.map(({ value }) => (
                 <div
                   key={value}
                   className="p-4 m-2 bg-opacity-25 bg-gray-600 rounded-lg"
@@ -73,7 +73,7 @@ export default function Chat() {
                     onChange={handleChange}
                   />
                   <label className="ml-2" htmlFor={value}>
-                    {`${emoji} ${value}`}
+                    {`${value}`}
                   </label>
                 </div>
               ))}
@@ -84,7 +84,7 @@ export default function Chat() {
             <h3 className="text-xl font-semibold">Tones</h3>
 
             <div className="flex flex-wrap justify-center">
-              {tones.map(({ value, emoji }) => (
+              {tones.map(({ value }) => (
                 <div
                   key={value}
                   className="p-4 m-2 bg-opacity-25 bg-gray-600 rounded-lg"
@@ -97,7 +97,7 @@ export default function Chat() {
                     onChange={handleChange}
                   />
                   <label className="ml-2" htmlFor={value}>
-                    {`${emoji} ${value}`}
+                    {`${value}`}
                   </label>
                 </div>
               ))}
@@ -108,7 +108,7 @@ export default function Chat() {
             <h3 className="text-xl font-semibold">Types</h3>
 
             <div className="flex flex-wrap justify-center">
-              {types.map(({ value, emoji }) => (
+              {types.map(({ value }) => (
                 <div
                   key={value}
                   className="p-4 m-2 bg-opacity-25 bg-gray-600 rounded-lg"
@@ -121,7 +121,7 @@ export default function Chat() {
                     onChange={handleChange}
                   />
                   <label className="ml-2" htmlFor={value}>
-                    {`${emoji} ${value}`}
+                    {`${value}`}
                   </label>
                 </div>
               ))}
@@ -132,7 +132,7 @@ export default function Chat() {
             <h3 className="text-xl font-semibold">Level of fun</h3>
 
             <div className="flex flex-wrap justify-center">
-              {temperatures.map(({ value, emoji }) => (
+              {temperatures.map(({ value }) => (
                 <div
                   key={value}
                   className="p-4 m-2 bg-opacity-25 bg-gray-600 rounded-lg"
@@ -145,7 +145,7 @@ export default function Chat() {
                     onChange={handleChange}
                   />
                   <label className="ml-2" htmlFor={value}>
-                    {`${emoji} ${value}`}
+                    {`${value}`}
                   </label>
                 </div>
               ))}
