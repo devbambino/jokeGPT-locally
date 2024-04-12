@@ -16,6 +16,7 @@ https://github.com/AUTOMATIC1111/stable-diffusion-webui
 
 ## Automatic Installation on Linux
 1. Clone: `git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git`
+`cd stable-diffusion-webui`
 2. Run `pyenv install 3.10.6` & `pyenv local 3.10.6`.
 3. for CPU running add to COMMANDLINE_ARGS in webui-user.sh: `--use-cpu all --precision full --no-half --skip-torch-cuda-test`
 4. `sudo apt-get install libgl1`.
@@ -34,3 +35,4 @@ or https://github.com/zixaphir/Stable-Diffusion-Webui-Civitai-Helper
     * Not very good for photorealistic images, or even to generate images of "common" persons or scenes
   * Versatile high resolution model [JuggernautXL](https://civitai.com/models/133005/juggernaut-xl)
     * Good generalist model that makes good use of light/shadow effects
+9. For runnin api add to COMMANDLINE_ARGS in webui-user.sh: `--api --use-cpu all --precision full --no-half --skip-torch-cuda-test`.
